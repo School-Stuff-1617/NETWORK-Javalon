@@ -1,3 +1,7 @@
+package model;
+
+import values.CardType;
+import values.Good;
 
 public class Character {
 	private Player player;

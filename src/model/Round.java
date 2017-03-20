@@ -1,3 +1,4 @@
+package model;
 
 public class Round {
 	private Character leader;
