@@ -14,7 +14,7 @@ public class PaneCompanionList implements MainSceneComponent{
 	
 	// Lobby coordinates
 	public int SCENE_COL = 32;
-	public final int SCENE_ROW = 0;
+	public int SCENE_ROW = 0;
 	public final int SCENE_COLSPAN = 1;
 	public final int SCENE_ROWSPAN = 35;
 	
@@ -56,11 +56,7 @@ public class PaneCompanionList implements MainSceneComponent{
 			sw.setPhase(SceneWrapper.SET_PHASE_LOBBY);
 		});
 	}
-	
-	public void adjustGrid() {
 		
-	}
-	
 	public Pane getPane() {
 		return companionPane;
 	}
@@ -73,5 +69,17 @@ public class PaneCompanionList implements MainSceneComponent{
 		coordinates[2] = SCENE_COLSPAN;
 		coordinates[3] = SCENE_ROWSPAN;
 		return coordinates;
+	}
+
+	@Override
+	public void adjustSceneMainCol(int adjustment) {
+		// TODO Auto-generated method stub
+		this.SCENE_COL += adjustment;
+	}
+
+	@Override
+	public void adjustSceneMainRow(int adjustment) {
+		// TODO Auto-generated method stub
+		this.SCENE_ROW += adjustment;
 	}
 }

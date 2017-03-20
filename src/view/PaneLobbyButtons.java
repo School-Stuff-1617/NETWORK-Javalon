@@ -13,10 +13,10 @@ public class PaneLobbyButtons implements MainSceneComponent{
 	private Button btnExit;
 
 	// Lobby coordinates
-	private final int SCENE_COL = 25;
-	private final int SCENE_ROW = 1;
-	private final int SCENE_COLSPAN = 8;
-	private final int SCENE_ROWSPAN = 4;
+	private int SCENE_COL = 25;
+	private int SCENE_ROW = 1;
+	private int SCENE_COLSPAN = 8;
+	private int SCENE_ROWSPAN = 4;
 
 	// TEMP CONTROLLER
 	private SceneWrapper sw;
@@ -77,5 +77,17 @@ public class PaneLobbyButtons implements MainSceneComponent{
 		coordinates[2] = SCENE_COLSPAN;
 		coordinates[3] = SCENE_ROWSPAN;
 		return coordinates;
+	}
+
+	@Override
+	public void adjustSceneMainCol(int adjustment) {
+		// TODO Auto-generated method stub
+		this.SCENE_COL += adjustment;
+	}
+
+	@Override
+	public void adjustSceneMainRow(int adjustment) {
+		// TODO Auto-generated method stub
+		this.SCENE_ROW += adjustment;
 	}
 }

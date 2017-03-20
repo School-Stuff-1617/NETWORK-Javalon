@@ -56,10 +56,10 @@ public class PaneChooseRoles implements MainSceneComponent{
 	private int totalMinions;
 	
 	// Lobby coordinates
-	public final static int SCENE_COL = 1;
-	public final static int SCENE_ROW = 1;
-	public final static int SCENE_COLSPAN = 23;
-	public final static int SCENE_ROWSPAN = 8;
+	public int SCENE_COL = 1;
+	public int SCENE_ROW = 1;
+	public int SCENE_COLSPAN = 23;
+	public int SCENE_ROWSPAN = 8;
 			
 	// TEMP  
 	// TEMP CONTROLLER
@@ -289,6 +289,18 @@ public class PaneChooseRoles implements MainSceneComponent{
 		coordinates[2] = SCENE_COLSPAN;
 		coordinates[3] = SCENE_ROWSPAN;
 		return coordinates;
+	}
+
+	@Override
+	public void adjustSceneMainCol(int adjustment) {
+		// TODO Auto-generated method stub
+		this.SCENE_COL += adjustment;
+	}
+
+	@Override
+	public void adjustSceneMainRow(int adjustment) {
+		// TODO Auto-generated method stub
+		this.SCENE_ROW += adjustment;
 	}
 }
 

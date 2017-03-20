@@ -85,16 +85,18 @@ public class SceneMain implements EventHandler<Event>, SceneContainer {
 	}
 	
 	// Method for finding rectangle in gridpane:
-	private void moveComponentFrom(int col, int row, int colTo, int rowTo) {
+	private void moveComponentFrom(int col, int row, int colOffset, int rowOffset) {
 		
 		for (Node node : layout.getChildren()) {
 			if (GridPane.getColumnIndex(node) == col && GridPane.getRowIndex(node) == row) {
 				MainSceneComponent nodeToMove = (MainSceneComponent)node;
 				
-				nodeToMove.adjustSceneMainCol();
+				nodeToMove.adjustSceneMainCol(colOffset);
+				nodeToMove.adjustSceneMainRow(rowOffset);
 				layout.getChildren().remove(nodeToMove);
-				
-				
+				System.out.println("remove");
+				addPane((MainSceneComponent) nodeToMove);
+				System.out.println("add");
 				
 				break;
 			}
