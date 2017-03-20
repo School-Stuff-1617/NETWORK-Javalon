@@ -13,4 +13,36 @@ public class Round {
 		status = false;
 		this.quest = quest;
 	}
+	
+	public void setLeader(Character leader) {
+		this.leader = leader;
+	}
+	
+	public void setCharacters(Character[] characters) {
+		this.characters = characters;
+	}
+	
+	public void setQuest(Quest quest) {
+		this.quest = quest;
+	}
+	
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+	
+	public Character[] getCharacters() {
+		return characters;
+	}
+	
+	public Character getLeader() {
+		return leader;
+	}
+	
+	public Quest getQuest() {
+		return quest;
+	}
+	
+	public boolean getStatus() {
+		return status;
+	}
 }

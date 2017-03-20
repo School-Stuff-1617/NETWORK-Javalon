@@ -18,5 +18,27 @@ public class Character {
 			this.team = "bad";
 	}
 	
+	public void setPlayer(Player player) {
+		this.player = player;
+	}
 	
+	public void setCardType(CardType cardType) {
+		this.cardType = cardType;
+	}
+	
+	public void setTeam(String team) {
+		this.team = team;
+	}
+	
+	public Player getPlayer() {
+		return player;
+	}
+	
+	public CardType getCardType() {
+		return cardType;
+	}
+	
+	public String getTeam() {
+		return team;
+	}
 }
